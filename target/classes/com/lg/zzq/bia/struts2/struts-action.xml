@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<package name="baseinfo" namespace="/baseinfo" extends="struts-default">
+
+		<action name="classCodeAction_*" class="com.lg.zzq.bia.web.struts.action.ClassCodeAction" method="{1}">
+			<result name="plist">/baseinfo/classcode/jClassCodeList.jsp</result>
+			<result name="pcreate">/baseinfo/classcode/jClassCodeCreate.jsp</result>
+			<result name="pupdate">/baseinfo/classcode/jClassCodeUpdate.jsp</result>
+		</action>
+		
+		<action name="textCodeAction_*" class="com.lg.zzq.bia.web.struts.action.TextCodeAction" method="{1}">
+			<result name="plist">/baseinfo/textcode/jTextCodeList.jsp</result>			
+			<result name="pcreate">/baseinfo/textcode/jTextCodeCreate.jsp</result>			
+			<result name="pupdate">/baseinfo/textcode/jTextCodeUpdate.jsp</result>			
+			<result name="pview">/baseinfo/textcode/jTextCodeView.jsp</result>			
+		</action>
+	</package>
+	
+	<package name="basicinfo" namespace="/basicinfo" extends="struts-default">
+		<action name="factoryAction_*" class="com.lg.zzq.bia.web.struts.action.FactoryAction">
+			<result name="plist">/basicinfo/factory/jFactoryList.jsp</result>
+			<result name="pcreate">/basicinfo/factory/jFactoryCreate.jsp</result>
+			<result name="pupdate">/basicinfo/factory/jFactoryUpdate.jsp</result>
+			<result name="pview">/basicinfo/factory/jFactoryView.jsp</result>
+		</action>
+	</package>
+</struts>
+

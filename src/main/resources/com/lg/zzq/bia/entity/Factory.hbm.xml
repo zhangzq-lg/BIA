@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.lg.zzq.bia.entity">
+	<class name="Factory" table="FACTORY_C">
+		<id name="id" column="FACTORY_ID" type="java.lang.String">
+			<generator class="uuid" />
+		</id>
+		<property name="ctype" column="CTYPE" type="java.lang.String" />
+		<property name="typeName" formula="(select t.name from text_code_c t where t.text_code_id=ctype)"
+			insert="false" update="false" />
+		<property name="fullName" column="FULL_NAME" type="java.lang.String" />
+		<property name="factoryName" column="FACTORY_NAME" type="java.lang.String" />
+		<property name="contactor" column="CONTACTOR" type="java.lang.String" />
+		<property name="phone" column="PHONE" type="java.lang.String" />
+		<property name="mobile" column="MOBILE" type="java.lang.String" />
+		<property name="fax" column="FAX" type="java.lang.String" />
+		<property name="cnote" column="CNOTE" type="java.lang.String" />
+		<property name="inspector" column="INSPECTOR" type="java.lang.String" />
+		<property name="state" column="STATE" type="java.lang.String" />
+		<property name="orderNo" column="ORDER_NO" type="java.lang.String" />
+	</class>
+</hibernate-mapping>
